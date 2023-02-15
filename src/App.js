@@ -6,16 +6,17 @@ import { Menu } from './components/Menu';
 const App = () => {
 const [shownMenu, setShownMenu] = useState(false);
 
-  const openMenu = () => {
-    setShownMenu(!shownMenu);
+  const toggleMenu = () => {
+    setShownMenu(!shownMenu)    
   }
 
   return (
     <>
-      <Header clickFn={openMenu}/>
+      <Header clickFn={toggleMenu}/>
       {shownMenu &&
         <Menu 
           shown={shownMenu}
+          clickFn={toggleMenu}
         />
       }
     </>

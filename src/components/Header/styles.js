@@ -32,7 +32,7 @@ const Bar = styled.div`
     height: 2px;
     width: 120px;
     background-color: #4DC6B6;
-    transition: 1s;
+    transition: all ease-in .5s;
     margin-top: 3px;
     z-index: 0;
 `;

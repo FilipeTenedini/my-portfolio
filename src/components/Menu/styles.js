@@ -1,29 +1,73 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { Keyframes } from 'styled-components';
 
 export const Overlay = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
     top:0;
-    /* background-color: rgba(0,0,0, 0.7); */
+    background-color: ${props => props.appear ? "rgba(0,0,0, 0.7)": "transparent"}; 
     z-index: 2;
-    transition: 5s;
+    transition: all ease-in 1s;
 `;
-
 export const Container = styled.div`
-    width: 450px;
+    width: 550px;
     height: 100%;
     background-color: #161616;
     position: fixed;
-    transform: translateX(${props => props.appear ? '0': '-450px'});
+    transform: translateX(${props => props.appear ? "-550px": "550px"});
+
+    right: -550px;
     top: 0;
     z-index: 3;
-    transition: 2s;
+    transition: all ease-in 1s;
 `;
+const rotateCenter = keyframes`
+
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+`
+const exRotate = keyframes`
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+`
+export const CloseMenu = styled.div`
+    display: flex;
+    color: white;
+    display: inline-flex;
+    font-size: 50px;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    
+    &:hover{
+        -webkit-animation: ${rotateCenter} 0.6s ease-in-out both;
+	        animation: ${rotateCenter} 0.6s ease-in-out both;
+    }
+    &:not(hover){
+        -webkit-animation: ${exRotate} 0.6s ease-in-out both;
+	    animation: ${exRotate} 0.6s ease-in-out both;
+    }
+`
 
 export const Items = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: 5s;
+    height: 100%;
 `;

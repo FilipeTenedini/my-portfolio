@@ -3,4 +3,4 @@ export const items = [
     'projetos',
     'sobre mim',
     'contato',
-]
+];
