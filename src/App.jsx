@@ -1,7 +1,8 @@
-import { useState } from "react";
 import * as C from "./App.styles";
+import { useState } from "react";
 import { Header } from './components/Header';
 import { Menu } from './components/Menu';
+import { Social } from './components/Social';
 
 const App = () => {
 const [shownMenu, setShownMenu] = useState(false);
@@ -12,6 +13,7 @@ const [shownMenu, setShownMenu] = useState(false);
 
   return (
     <>
+      <C.GlobalStyle />
       <Header clickFn={toggleMenu}/>
       {shownMenu &&
         <Menu 
@@ -19,6 +21,7 @@ const [shownMenu, setShownMenu] = useState(false);
           clickFn={toggleMenu}
         />
       }
+      <Social />
     </>
 
   );

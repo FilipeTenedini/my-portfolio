@@ -1,6 +1,7 @@
 import * as C from './styles'
 import { items } from './items';
 import { MenuItem } from '../MenuItem';
+import { InfoItem } from '../InfoItem';
 import { IoMdClose } from 'react-icons/io';
 import { useEffect, useState } from 'react';
 
@@ -32,6 +33,7 @@ export const Menu = ({shown, clickFn}) => {
                     />
                 ))}
                 </C.Items>
+                <InfoItem />
             </C.Container>
         </>
 

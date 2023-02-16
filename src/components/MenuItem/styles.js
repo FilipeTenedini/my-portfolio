@@ -10,12 +10,14 @@ export const ListItem = styled.li`
     cursor: pointer;
     color: #FFF;
     transition: .5s;
-    &:first-child{
-        margin-top: 80px;
-    }
-    &:hover{
-        color: #4DC6B6;
-    }
+    
+        &:first-child{
+            margin-top: 80px;
+        }
+        &:hover{
+            color: #4DC6B6;
+            transform: scale(1.1);
+        }
 `
 
 export const Text = styled.p`
@@ -24,9 +26,4 @@ export const Text = styled.p`
     text-transform: uppercase;
     padding-left: 80px;
 
-
-    &:hover{
-
-        transform: scale(1.1);
-    }
 `

@@ -6,7 +6,7 @@ export const Header = ({clickFn}) => {
         <C.Header>
             <C.Container>
                 <C.Name>
-                    Filipe Tenedini
+                    filipe<span>Tenedini</span>
                     <C.Bar className='bar'/>
                 </C.Name>
                 <C.MenuSymbol>
