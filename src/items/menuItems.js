@@ -1,4 +1,4 @@
-export const items = [
+export const menuItems = [
     'home',
     'projetos',
     'sobre mim',

@@ -10,13 +10,13 @@ export const Overlay = styled.div`
     transition: all ease-in .5s;
 `;
 export const Container = styled.div`
-    width: 550px;
+    width: 480px;
     height: 100%;
     background-color: #161616;
     position: fixed;
-    transform: translateX(${({appear}) => appear ? "-550px": "550px"});
+    transform: translateX(${({appear}) => appear ? "-480px": "480px"});
 
-    right: -550px;
+    right: -480px;
     top: 0;
     z-index: 3;
     transition: all ease-in .5s;
@@ -45,11 +45,11 @@ export const CloseMenu = styled.div`
     display: flex;
     color: white;
     display: inline-flex;
-    font-size: 50px;
+    font-size: 42px;
     align-items: center;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 30px;
+    top: 30px;
     cursor: pointer;
     
       &:hover{
@@ -61,11 +61,56 @@ export const CloseMenu = styled.div`
         animation: ${exRotate} 0.6s ease-in-out both;
       }
 `
-
 export const Items = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: 5s;
-    height: 95%;
+    height: 82%;
 `;
+export const ListItem = styled.li`
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    color: #FFF;
+        &:first-child{
+            margin-top: 60px;
+        }
+
+`
+export const Text = styled.p`
+    font-size: 28px;
+    width: 300px;
+    text-transform: uppercase;
+    padding-left: 80px;
+    transition: .5s;
+    cursor: pointer;        
+    
+        &:hover{
+            color: #4DC6B6;
+            transform: scale(1.1);
+        }
+
+
+`;
+export const NetWork = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`
+export const InfoItem = styled.div`
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+`
+
+export const ColorArea = styled.span`
+    color: #4DC6B6 ;
+    margin-left: 5px;
+`

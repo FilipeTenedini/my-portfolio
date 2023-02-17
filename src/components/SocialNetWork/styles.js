@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 50px;
     height: 50px;
-    margin-bottom: 25px;
-    font-size: 36px;
+    margin: ${({margin}) => margin ?? "10px"};
+    font-size: 28px;
     border-radius: 50%;
     display: flex;
     justify-content: center;

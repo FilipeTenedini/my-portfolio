@@ -4,18 +4,14 @@ export const Header = styled.header`
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-`;
-export const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color:red; */
+    position: fixed;
+    top: 0;
 
 `;
+
 export const Name = styled.h1`
     color: #FFFFFF;
     font-size: 32px;

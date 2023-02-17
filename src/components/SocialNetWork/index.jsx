@@ -1,8 +1,8 @@
 import { Container } from './styles';
 
-export const SocialNetWork = ({network}) => {
+export const SocialNetWork = ({network, margin}) => {
     return(
-        <Container>
+        <Container margin={margin}>
             {network}
         </Container>
     );
